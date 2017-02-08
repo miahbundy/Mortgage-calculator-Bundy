@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.view.View;
 import android.content.Intent;
+import android.widget.RadioButton;
 
 public class mortSum extends AppCompatActivity {
 
@@ -26,4 +27,8 @@ public class mortSum extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+
+
+
 }

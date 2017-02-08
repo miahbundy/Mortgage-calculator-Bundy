@@ -6,31 +6,48 @@ import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
 import android.widget.CheckBox;
+import android.widget.RadioButton;
 
 public class MainActivity extends AppCompatActivity {
 
-    CheckBox mortSum;
-    CheckBox paySum;
+    RadioButton m;
+    RadioButton p;
+
+    boolean isMort;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mortSum = (CheckBox) findViewById(R.id.mortSum);
-        paySum = (CheckBox) findViewById(R.id.paySum);
+        m = (RadioButton) findViewById(R.id.radio_mort);
+        p = (RadioButton) findViewById(R.id.radio_pay);
     }
 
     public void sendMessage(View view) {
-        if (mortSum.isChecked()) {
+        if (isMort) {
             Intent intent = new Intent(MainActivity.this, mortSum.class);
             startActivity(intent);
         }
 
-        else if (paySum.isChecked()) {
+        else if (!isMort) {
             Intent intent = new Intent(MainActivity.this, pay_sum.class);
             startActivity(intent);
         }
     }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        if (p.isChecked()){
+            isMort=false;
+        }
+        else if(m.isChecked()){
+            isMort=true;
+        }
+    }
+
+
 }
 
