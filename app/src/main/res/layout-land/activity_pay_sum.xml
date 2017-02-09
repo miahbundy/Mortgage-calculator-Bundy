@@ -5,7 +5,7 @@
 
 
     <TextView
-        android:text="Payment Summary"
+        android:text="@string/payment_Summary"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -15,7 +15,7 @@
         android:id="@+id/textView2" />
 
     <Button
-        android:text="Go Back Home"
+        android:text="@string/go_Back_Home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

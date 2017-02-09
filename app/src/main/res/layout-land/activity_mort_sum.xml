@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
         <TextView
-            android:text="Mortgage Summary"
+            android:text="@string/mortgage_Summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -14,7 +14,7 @@
             android:id="@+id/textView" />
 
         <Button
-            android:text="go back home"
+            android:text="@string/go_Back_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
