@@ -51,7 +51,8 @@
         android:id="@+id/propTax"
         android:layout_marginBottom="28dp"
         android:layout_above="@+id/intRate"
-        android:layout_alignStart="@+id/homeVal" />
+        android:layout_alignStart="@+id/homeVal"
+        android:text="0.0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -61,7 +62,8 @@
         android:id="@+id/intRate"
         android:layout_alignBaseline="@+id/loanTerm"
         android:layout_alignBottom="@+id/loanTerm"
-        android:layout_alignStart="@+id/propTax" />
+        android:layout_alignStart="@+id/propTax"
+        android:text="0" />
 
     <EditText
             android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
             android:id="@+id/homeVal"
         android:layout_marginStart="10dp"
         android:layout_above="@+id/startDateTxt"
-        android:layout_alignStart="@+id/startDate" />
+        android:layout_alignStart="@+id/startDate"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -81,7 +84,8 @@
         android:id="@+id/startDate"
         android:layout_marginBottom="21dp"
         android:layout_above="@+id/propTax"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -91,7 +95,8 @@
         android:id="@+id/loanAmt"
         android:layout_below="@+id/startDate"
         android:layout_alignStart="@+id/loanTerm"
-        android:layout_marginTop="11dp" />
+        android:layout_marginTop="11dp"
+        android:text="0" />
 
     <TextView
             android:text="@string/home_Insurance"
@@ -110,7 +115,8 @@
             android:id="@+id/loanTerm"
         android:layout_marginBottom="22dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/hoaAmt" />
+        android:layout_alignStart="@+id/hoaAmt"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -120,7 +126,8 @@
         android:id="@+id/hiPerYear"
         android:layout_alignBaseline="@+id/startDate"
         android:layout_alignBottom="@+id/startDate"
-        android:layout_alignStart="@+id/loanAmt" />
+        android:layout_alignStart="@+id/loanAmt"
+        android:text="0" />
 
     <EditText
             android:layout_width="wrap_content"
@@ -131,7 +138,8 @@
         android:layout_marginStart="13dp"
         android:layout_alignBaseline="@+id/homeVal"
         android:layout_alignBottom="@+id/homeVal"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:text="0" />
 
     <TextView
             android:text="@string/property_Tax"

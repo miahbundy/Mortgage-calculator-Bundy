@@ -35,7 +35,8 @@
         android:id="@+id/propTax"
         android:layout_alignBaseline="@+id/propTaxTxt"
         android:layout_alignBottom="@+id/propTaxTxt"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <TextView
         android:text="@string/home_Insurance"
@@ -62,7 +63,8 @@
         android:id="@+id/startDate"
         android:layout_above="@+id/propTax"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="39dp" />
+        android:layout_marginBottom="39dp"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -71,7 +73,8 @@
         android:ems="10"
         android:id="@+id/loanTerm"
         android:layout_above="@+id/propTax"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -80,7 +83,8 @@
         android:ems="10"
         android:id="@+id/loanAmt"
         android:layout_above="@+id/intRate"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -89,7 +93,8 @@
         android:ems="10"
         android:id="@+id/intRate"
         android:layout_above="@+id/startDate"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <TextView
         android:text="@string/loan_Amount"
@@ -116,7 +121,8 @@
         android:ems="10"
         android:id="@+id/hoaAmt"
         android:layout_above="@+id/button2"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -125,7 +131,8 @@
         android:ems="10"
         android:id="@+id/hiPerYear"
         android:layout_above="@+id/hoaAmt"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <RadioGroup
         android:layout_width="fill_parent"
@@ -155,7 +162,8 @@
         android:ems="10"
         android:id="@+id/homeVal"
         android:layout_above="@+id/loanAmt"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="0" />
 
     <TextView
         android:text="@string/home_Value"
