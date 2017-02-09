@@ -10,26 +10,7 @@
     tools:context="com.introtoandroid.mortgage_calculator_bundy.MainActivity">
 
     <TextView
-        android:text="Loan Term"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:id="@+id/loanTermTxt"
-        android:layout_below="@+id/intRateTxt"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp" />
-
-    <TextView
-        android:text="Start Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/startDateTxt"
-        android:layout_marginTop="26dp"
-        android:layout_below="@+id/loanTermTxt"
-        android:layout_alignStart="@+id/loanTermTxt" />
-
-    <TextView
-        android:text="HOA amount"
+        android:text="@string/HOA_Amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/hoaAmtTxt"
@@ -38,7 +19,7 @@
         android:layout_alignStart="@+id/propTaxTxt" />
 
     <TextView
-        android:text="Interest Rate"
+        android:text="@string/interest_Rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/intRateTxt"
@@ -57,7 +38,7 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Home Insurance / Year"
+        android:text="@string/home_Insurance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/hiPerYearTxt"
@@ -65,7 +46,7 @@
         android:layout_marginBottom="12dp" />
 
     <TextView
-        android:text="Property Tax"
+        android:text="@string/property_Tax"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/propTaxTxt"
@@ -111,7 +92,7 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Loan Amount"
+        android:text="@string/loan_Amount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/loanAmtTxt"
@@ -156,13 +137,13 @@
         <RadioButton android:id="@+id/radio_mort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mortgage Summary"
+            android:text="@string/mortgage_Summary"
             android:onClick="onRadioButtonClicked"/>
 
         <RadioButton android:id="@+id/radio_pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Payment Summary"
+            android:text="@string/payment_Summary"
             android:onClick="onRadioButtonClicked"/>
 
     </RadioGroup>
@@ -177,13 +158,30 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="Home Value"
+        android:text="@string/home_Value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/homeValTxt"
         android:layout_alignBaseline="@+id/homeVal"
         android:layout_alignBottom="@+id/homeVal"
         android:layout_alignStart="@+id/intRateTxt" />
+
+    <TextView
+        android:text="@string/start_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startDateTxt"
+        android:layout_above="@+id/propTax"
+        android:layout_alignStart="@+id/loanTermTxt" />
+
+    <TextView
+        android:text="@string/loan_Term"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loanTermTxt"
+        android:layout_marginStart="20dp"
+        android:layout_alignBottom="@+id/startDate"
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>

@@ -18,6 +18,7 @@ public class mortSum extends AppCompatActivity {
         setContentView(R.layout.activity_mort_sum);
 
         morgX2 = (TextView) findViewById(R.id.textView);
+        //morgX2.setText();
 
     }
 
