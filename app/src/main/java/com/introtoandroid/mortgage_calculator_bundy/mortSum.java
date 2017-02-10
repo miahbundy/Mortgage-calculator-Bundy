@@ -12,8 +12,9 @@ import android.widget.RadioButton;
 public class mortSum extends AppCompatActivity {
 
     TextView morg;
-    TextView test;
 
+
+    TextView test;
     TextView test2;
     TextView test3;
     TextView test4;
