@@ -1,28 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
         <TextView
-            android:text="@string/mortgage_Summary"
+            android:text="TextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_below="@+id/textView"
             android:layout_alignParentStart="true"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="83dp"
-            android:id="@+id/textView" />
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="39dp"
+            android:id="@+id/textView3" />
+
+        <TextView
+            android:text="@string/home_Value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView3"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:text="@string/loan_Term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_marginTop="15dp"
+            android:id="@+id/textView5" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView5"
+            android:layout_alignEnd="@+id/textView5"
+            android:id="@+id/textView6" />
+
+        <TextView
+            android:text="loan Amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_marginTop="19dp"
+            android:id="@+id/textView7" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView7"
+            android:layout_alignEnd="@+id/textView7"
+            android:id="@+id/textView8" />
+
+        <TextView
+            android:text="@string/interest_Rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:layout_alignEnd="@+id/textView8"
+            android:layout_marginTop="21dp"
+            android:id="@+id/textView9" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView9"
+            android:layout_alignEnd="@+id/textView9"
+            android:layout_marginTop="11dp"
+            android:id="@+id/textView10" />
+
+        <TextView
+            android:text="@string/HOA_Amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_alignEnd="@+id/textView"
+            android:id="@+id/textView11" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView3"
+            android:layout_alignEnd="@+id/textView11"
+            android:id="@+id/textView12" />
+
+        <TextView
+            android:text="@string/start_Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/textView6"
+            android:layout_alignStart="@+id/textView12"
+            android:id="@+id/textView13" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView13"
+            android:layout_alignEnd="@+id/textView13"
+            android:id="@+id/textView14" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView15"
+            android:layout_alignEnd="@+id/textView15"
+            android:id="@+id/textView16" />
+
+        <TextView
+            android:text="@string/home_Insurance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView9"
+            android:layout_alignEnd="@+id/textView16"
+            android:id="@+id/textView17" />
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView18"
+            android:layout_alignBaseline="@+id/textView10"
+            android:layout_alignBottom="@+id/textView10"
+            android:layout_alignEnd="@+id/textView17" />
+
+        <TextView
+            android:text="@string/property_Tax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView15"
+            android:layout_alignBaseline="@+id/textView7"
+            android:layout_alignBottom="@+id/textView7"
+            android:layout_alignEnd="@+id/textView14" />
 
         <Button
             android:text="@string/go_Back_Home"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="119dp"
-            android:layout_marginBottom="96dp"
             android:onClick="sendMessage"
-            android:id="@+id/mGoBack" />
+            android:id="@+id/mGoBack"
+            android:layout_above="@+id/textView16"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="89dp" />
+
+        <TextView
+            android:text="@string/mortgage_Summary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/mGoBack"
+            android:layout_marginEnd="66dp" />
 
 
-</LinearLayout>
+</RelativeLayout>

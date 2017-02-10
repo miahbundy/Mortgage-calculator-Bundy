@@ -71,16 +71,6 @@
         android:layout_height="wrap_content"
         android:inputType="number"
         android:ems="10"
-        android:id="@+id/loanTerm"
-        android:layout_above="@+id/propTax"
-        android:layout_alignParentEnd="true"
-        android:text="0" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:id="@+id/loanAmt"
         android:layout_above="@+id/intRate"
         android:layout_alignParentEnd="true"
@@ -179,8 +169,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/startDateTxt"
+        android:layout_alignStart="@+id/loanTermTxt"
+        android:layout_below="@+id/intRate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/loanTerm"
+        android:text="0"
         android:layout_above="@+id/propTax"
-        android:layout_alignStart="@+id/loanTermTxt" />
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="@string/loan_Term"
@@ -188,7 +188,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/loanTermTxt"
         android:layout_marginStart="20dp"
-        android:layout_alignBottom="@+id/startDate"
+        android:layout_alignBaseline="@+id/loanTerm"
+        android:layout_alignBottom="@+id/loanTerm"
         android:layout_alignParentStart="true" />
 
 

@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     RadioButton m;
     RadioButton p;
-    boolean isMort;
+    int isMort;
 
     EditText homeVal;
     EditText loanTerm;
@@ -58,16 +58,49 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view) {
-        if (isMort) {
-            //Editable theString = homeVal.getText();
-            Intent intent = new Intent(MainActivity.this, mortSum.class);
-            //intent.putExtra("homeVal", theString);
-            startActivity(intent);
+
+        String hv1 = homeVal.getText().toString();
+        String lt1 = loanTerm.getText().toString();
+        String la1 = loanAmt.getText().toString();
+        String ir1 = intRate.getText().toString();
+        String ha1 = hoaAmt.getText().toString();
+        //String sd1 = startDate.getText().toString();
+        String pt1 = propTax.getText().toString();
+        String hpy1 = hiPerYear.getText().toString();
+
+        if (isMort == 1) {
+
+            Intent mintent = new Intent(MainActivity.this, mortSum.class);
+
+            mintent.putExtra("homeVal", hv1);
+            mintent.putExtra("loanTerm", lt1);
+            mintent.putExtra("loanAmt", la1);
+            mintent.putExtra("intRate", ir1);
+            mintent.putExtra("hoaAmt", ha1);
+            //mintent.putExtra("loanTerm", sd1);
+            mintent.putExtra("propTax", pt1);
+            mintent.putExtra("hiPerYear", hpy1);
+
+            startActivity(mintent);
         }
 
-        else if (!isMort) {
-            Intent intent = new Intent(MainActivity.this, pay_sum.class);
-            startActivity(intent);
+        if (isMort == 2) {
+            Intent pintent = new Intent(MainActivity.this, pay_sum.class);
+
+            pintent.putExtra("homeVal", hv1);
+            pintent.putExtra("loanTerm", lt1);
+            pintent.putExtra("loanAmt", la1);
+            pintent.putExtra("intRate", ir1);
+            pintent.putExtra("hoaAmt", ha1);
+            //pintent.putExtra("loanTerm", sd1);
+            pintent.putExtra("propTax", pt1);
+            pintent.putExtra("hiPerYear", hpy1);
+
+            startActivity(pintent);
+        }
+
+        else{
+
         }
     }
 
@@ -76,10 +109,14 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         if (p.isChecked()){
-            isMort=false;
+            isMort=2;
         }
         else if(m.isChecked()){
-            isMort=true;
+            isMort=1;
+        }
+
+        else{
+            isMort=3;
         }
     }
 
