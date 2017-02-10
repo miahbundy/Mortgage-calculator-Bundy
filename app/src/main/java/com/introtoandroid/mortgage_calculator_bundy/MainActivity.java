@@ -35,12 +35,23 @@ public class MainActivity extends AppCompatActivity {
     Double pt= new Double(0);
     Integer hpy= new Integer(0);
 
+    String one;
+    String two;
+    String three;
+    String four;
+    String five;
+    //String six;
+    String seven;
+    String eight;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent in = getIntent();
 
         m = (RadioButton) findViewById(R.id.radio_mort);
         p = (RadioButton) findViewById(R.id.radio_pay);
@@ -53,6 +64,64 @@ public class MainActivity extends AppCompatActivity {
         //startDate = (EditText) findViewById(R.id.startDate);
         propTax = (EditText) findViewById(R.id.propTax);
         hiPerYear = (EditText) findViewById(R.id.hiPerYear);
+
+        one = in.getStringExtra("homeVal");
+        two = in.getStringExtra("loanTerm");
+        three = in.getStringExtra("loanAmt");
+        four = in.getStringExtra("intRate");
+        five = in.getStringExtra("hoaAmt");
+        // six = mintent.getStringExtra("startDate");
+        seven = in.getStringExtra("propTax");
+        eight = in.getStringExtra("hiPerYear");
+
+
+        /*if (one== null){homeVal.setText(0);}
+        else{homeVal.setText(one);}
+
+        if (two== null){loanTerm.setText(0);}
+        else{loanTerm.setText(two);}
+
+        if (three== null){loanAmt.setText(0);}
+        else{loanAmt.setText(three);}
+
+        if (four== null){intRate.setText(0);}
+        else{intRate.setText(four);}
+
+        if (five== null){hoaAmt.setText(0);}
+        else{hoaAmt.setText(five);}
+
+        *//*if (six== null){homeVal.setText(0);}
+        else{homeVal.setText(one);}*//*
+
+        if (seven== null){propTax.setText(0);}
+        else{propTax.setText(seven);}
+
+        if (eight== null){hiPerYear.setText(0);}
+        else{hiPerYear.setText(eight);}*/
+
+
+        if(one!=null){
+        homeVal.setText(one);}
+
+        if(two!=null){
+        loanTerm.setText(two);}
+
+        if(three!=null){
+        loanAmt.setText(three);}
+
+        if(four!=null){
+        intRate.setText(four);}
+
+        if(five!=null){
+        hoaAmt.setText(five);}
+
+        //test6.setText(six);
+
+        if(seven!=null){
+        propTax.setText(seven);}
+
+        if(eight!=null){
+        hiPerYear.setText(eight);}
 
 
     }
@@ -169,8 +238,6 @@ public class MainActivity extends AppCompatActivity {
         hiPerYear.setText(hpy.toString());
 
     }
-
-
 
 
 }

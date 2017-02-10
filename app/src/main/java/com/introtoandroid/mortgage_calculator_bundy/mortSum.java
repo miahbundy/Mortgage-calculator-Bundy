@@ -13,7 +13,6 @@ public class mortSum extends AppCompatActivity {
 
     TextView morg;
 
-
     TextView test;
     TextView test2;
     TextView test3;
@@ -22,6 +21,15 @@ public class mortSum extends AppCompatActivity {
     //TextView test6;
     TextView test7;
     TextView test8;
+
+    String one;
+    String two;
+    String three;
+    String four;
+    String five;
+    //String six;
+    String seven;
+    String eight;
 
 
     @Override
@@ -41,14 +49,14 @@ public class mortSum extends AppCompatActivity {
         test8 = (TextView) findViewById(R.id.textView18);
 
         Intent mintent = getIntent();
-        String one = mintent.getStringExtra("homeVal");
-        String two = mintent.getStringExtra("loanTerm");
-        String three = mintent.getStringExtra("loanAmt");
-        String four = mintent.getStringExtra("intRate");
-        String five = mintent.getStringExtra("hoaAmt");
-        //String six = mintent.getStringExtra("startDate");
-        String seven = mintent.getStringExtra("propTax");
-        String eight = mintent.getStringExtra("hiPerYear");
+        one = mintent.getStringExtra("homeVal");
+         two = mintent.getStringExtra("loanTerm");
+         three = mintent.getStringExtra("loanAmt");
+         four = mintent.getStringExtra("intRate");
+         five = mintent.getStringExtra("hoaAmt");
+        // six = mintent.getStringExtra("startDate");
+         seven = mintent.getStringExtra("propTax");
+         eight = mintent.getStringExtra("hiPerYear");
 
 
 
@@ -61,11 +69,32 @@ public class mortSum extends AppCompatActivity {
         test7.setText(seven);
         test8.setText(eight);
 
+
+
     }
 
     public void sendMessage(View view) {
 
+        String hv1 = one;
+        String lt1 = two;
+        String la1 = three;
+        String ir1 = four;
+        String ha1 = five;
+        //String sd1 = six;
+        String pt1 = seven;
+        String hpy1 = eight;
+
         Intent intent = new Intent(mortSum.this, MainActivity.class);
+
+        intent.putExtra("homeVal", hv1);
+        intent.putExtra("loanTerm", lt1);
+        intent.putExtra("loanAmt", la1);
+        intent.putExtra("intRate", ir1);
+        intent.putExtra("hoaAmt", ha1);
+        //pintent.putExtra("loanTerm", sd1);
+        intent.putExtra("propTax", pt1);
+        intent.putExtra("hiPerYear", hpy1);
+
         startActivity(intent);
 
     }

@@ -191,4 +191,5 @@
         android:layout_alignEnd="@+id/propTaxTxt" />
 
 
+
 </RelativeLayout>
