@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.EditText;
 import android.content.Intent;
@@ -22,16 +23,16 @@ public class MainActivity extends AppCompatActivity {
     EditText loanAmt;
     EditText intRate;
     EditText hoaAmt;
-    //EditText startDate;
     EditText propTax;
     EditText hiPerYear;
+
+    DatePicker chooseDate;
 
     Integer hv = new Integer(0);
     Integer lt= new Integer(0);
     Integer la= new Integer(0);
     Integer ir= new Integer(0);
     Integer ha= new Integer(0);
-    //Date sd;
     Double pt= new Double(0);
     Float hpy= new Float(0.0);
 
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
     String three;
     String four;
     String five;
-    //String six;
     String seven;
     String eight;
 
@@ -63,9 +63,10 @@ public class MainActivity extends AppCompatActivity {
         loanAmt = (EditText) findViewById(R.id.loanAmt);
         intRate = (EditText) findViewById(R.id.intRate);
         hoaAmt = (EditText) findViewById(R.id.hoaAmt);
-        //startDate = (EditText) findViewById(R.id.startDate);
         propTax = (EditText) findViewById(R.id.propTax);
         hiPerYear = (EditText) findViewById(R.id.hiPerYear);
+        chooseDate = (DatePicker) findViewById(R.id.DatePicker01);
+
 
         one = in.getStringExtra("homeVal");
         two = in.getStringExtra("loanTerm");
@@ -92,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         if(five!=null){
         hoaAmt.setText(five);}
 
-        //test6.setText(six);
 
         if(seven!=null){
         propTax.setText(seven);}
@@ -114,14 +114,18 @@ public class MainActivity extends AppCompatActivity {
         String pt1 = propTax.getText().toString();
         String hpy1 = hiPerYear.getText().toString();
 
+        String day = String.valueOf(chooseDate.getDayOfMonth());
+        String month = String.valueOf(chooseDate.getMonth());
+        String year = String.valueOf(chooseDate.getYear());
+
         hv = Integer.parseInt(homeVal.getText().toString());
         lt = Integer.parseInt(loanTerm.getText().toString());
         la = Integer.parseInt(loanAmt.getText().toString());
         ir = Integer.parseInt(intRate.getText().toString());
         ha = Integer.parseInt(hoaAmt.getText().toString());
-        //sd = (Integer) startDate.getText();
         pt = Double.parseDouble(propTax.getText().toString());
         hpy = Float.parseFloat(hiPerYear.getText().toString());
+
 
         Integer numOfMonths = 12;
 
@@ -176,6 +180,10 @@ public class MainActivity extends AppCompatActivity {
             //pintent.putExtra("loanTerm", sd1);
             pintent.putExtra("propTax", pt1);
             pintent.putExtra("hiPerYear", hpy1);
+
+            pintent.putExtra("day", day);
+            pintent.putExtra("month", month);
+            pintent.putExtra("year", year);
 
             startActivity(pintent);
         }
