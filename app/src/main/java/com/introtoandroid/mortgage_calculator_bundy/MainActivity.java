@@ -35,6 +35,12 @@ public class MainActivity extends AppCompatActivity {
     Integer ha= new Integer(0);
     Double pt= new Double(0);
     Float hpy= new Float(0.0);
+    int da;
+    int mo;
+    int ye;
+
+
+
 
     String one;
     String two;
@@ -217,19 +223,22 @@ public class MainActivity extends AppCompatActivity {
         la = Integer.parseInt(loanAmt.getText().toString());
         ir = Integer.parseInt(intRate.getText().toString());
         ha = Integer.parseInt(hoaAmt.getText().toString());
-        //sd = (Integer) startDate.getText();
         pt = Double.parseDouble(propTax.getText().toString());
         hpy = Float.parseFloat(hiPerYear.getText().toString());
-
+        da = chooseDate.getDayOfMonth();
+        mo = chooseDate.getMonth();
+        ye = chooseDate.getYear();
 
         outState.putInt("hv",hv);
         outState.putInt("lt",lt);
         outState.putInt("la",la);
         outState.putInt("ir",ir);
         outState.putInt("ha",ha);
-        //outState.putInt("sd",sd);
         outState.putDouble("pt",pt);
         outState.putFloat("hpy",hpy);
+        outState.putInt("day", da);
+        outState.putInt("month", mo);
+        outState.putInt("year", ye);
 
 
     }
@@ -243,9 +252,11 @@ public class MainActivity extends AppCompatActivity {
         la = savedInstanceState.getInt("la");
         ir = savedInstanceState.getInt("ir");
         ha = savedInstanceState.getInt("ha");
-        //sd = savedInstanceState.getInt("sd");
         pt = savedInstanceState.getDouble("pt");
         hpy = savedInstanceState.getFloat("hpy");
+        da = savedInstanceState.getInt("day");
+        mo = savedInstanceState.getInt("month");
+        ye = savedInstanceState.getInt("year");
 
 
         homeVal.setText(hv.toString());
@@ -253,9 +264,9 @@ public class MainActivity extends AppCompatActivity {
         loanAmt.setText(la.toString());
         intRate.setText(ir.toString());
         hoaAmt.setText(ha.toString());
-        //startDate.setText(sd.toString());
         propTax.setText(pt.toString());
         hiPerYear.setText(hpy.toString());
+        chooseDate.updateDate(ye,mo,da);
 
     }
 
