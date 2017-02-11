@@ -13,14 +13,12 @@ public class mortSum extends AppCompatActivity {
 
     TextView morg;
 
-    TextView test;
-    TextView test2;
-    TextView test3;
-    TextView test4;
-    TextView test5;
-    //TextView test6;
-    TextView test7;
-    TextView test8;
+
+    TextView monthlyhi;
+    TextView taxPerMonth;
+    TextView totalHIPaidTV;
+    TextView hoaPerYearTV;
+    TextView totalHOAPaidTV;
 
     String one;
     String two;
@@ -31,6 +29,12 @@ public class mortSum extends AppCompatActivity {
     String seven;
     String eight;
 
+    String hiPerMonth;
+    String monthlyTaxPaid;
+    String totalHIPaid;
+    String hoaPerYear;
+    String totalHOAPaid;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,39 +43,42 @@ public class mortSum extends AppCompatActivity {
 
         morg = (TextView) findViewById(R.id.textView);
 
-        test = (TextView) findViewById(R.id.textView3);
-        test2 = (TextView) findViewById(R.id.textView6);
-        test3 = (TextView) findViewById(R.id.textView8);
-        test4 = (TextView) findViewById(R.id.textView10);
-        test5 = (TextView) findViewById(R.id.textView12);
-        //test6 = (TextView) findViewById(R.id.textView14);
-        test7 = (TextView) findViewById(R.id.textView16);
-        test8 = (TextView) findViewById(R.id.textView18);
+        monthlyhi = (TextView) findViewById(R.id.textView19);
+        taxPerMonth = (TextView) findViewById(R.id.textView3);
+        totalHIPaidTV = (TextView) findViewById(R.id.textView12);
+        hoaPerYearTV = (TextView) findViewById(R.id.textView21);
+        totalHOAPaidTV = (TextView) findViewById(R.id.textView23);
 
         Intent mintent = getIntent();
         one = mintent.getStringExtra("homeVal");
-         two = mintent.getStringExtra("loanTerm");
-         three = mintent.getStringExtra("loanAmt");
-         four = mintent.getStringExtra("intRate");
-         five = mintent.getStringExtra("hoaAmt");
+        two = mintent.getStringExtra("loanTerm");
+        three = mintent.getStringExtra("loanAmt");
+        four = mintent.getStringExtra("intRate");
+        five = mintent.getStringExtra("hoaAmt");
         // six = mintent.getStringExtra("startDate");
-         seven = mintent.getStringExtra("propTax");
-         eight = mintent.getStringExtra("hiPerYear");
+        seven = mintent.getStringExtra("propTax");
+        eight = mintent.getStringExtra("hiPerYear");
+
+        hiPerMonth = mintent.getStringExtra("hiPerMonth");
+        monthlyTaxPaid = mintent.getStringExtra("monthlyTaxPaid");
+        totalHIPaid = mintent.getStringExtra("totalHIPaid");
+        hoaPerYear = mintent.getStringExtra("hoaPerYear");
+        totalHOAPaid =  mintent.getStringExtra("totalHOAPaid");
+
+
+        monthlyhi.setText(hiPerMonth);
+        taxPerMonth.setText(monthlyTaxPaid);
+        totalHIPaidTV.setText(totalHIPaid);
+        hoaPerYearTV.setText(hoaPerYear);
+        totalHOAPaidTV.setText(totalHOAPaid);
 
 
 
-        test.setText(one);
-        test2.setText(two);
-        test3.setText(three);
-        test4.setText(four);
-        test5.setText(five);
-        //test6.setText(six);
-        test7.setText(seven);
-        test8.setText(eight);
 
 
 
     }
+
 
     public void sendMessage(View view) {
 

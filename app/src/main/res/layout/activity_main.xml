@@ -10,15 +10,6 @@
     tools:context="com.introtoandroid.mortgage_calculator_bundy.MainActivity">
 
     <TextView
-        android:text="@string/HOA_Amount"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hoaAmtTxt"
-        android:layout_alignBaseline="@+id/hoaAmt"
-        android:layout_alignBottom="@+id/hoaAmt"
-        android:layout_alignStart="@+id/propTaxTxt" />
-
-    <TextView
         android:text="@string/interest_Rate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -54,17 +45,6 @@
         android:layout_above="@+id/hiPerYear"
         android:layout_alignStart="@+id/loanAmtTxt"
         android:layout_marginBottom="16dp" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/startDate"
-        android:layout_above="@+id/propTax"
-        android:layout_alignParentEnd="true"
-        android:layout_marginBottom="39dp"
-        android:text="0" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -129,7 +109,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:id="@+id/radioGroup">
 
         <RadioButton android:id="@+id/radio_mort"
             android:layout_width="wrap_content"
@@ -164,14 +145,6 @@
         android:layout_alignBottom="@+id/homeVal"
         android:layout_alignStart="@+id/intRateTxt" />
 
-    <TextView
-        android:text="@string/start_Date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/startDateTxt"
-        android:layout_alignStart="@+id/loanTermTxt"
-        android:layout_below="@+id/intRate" />
-
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -191,6 +164,34 @@
         android:layout_alignBaseline="@+id/loanTerm"
         android:layout_alignBottom="@+id/loanTerm"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="@string/start_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/startDateTxt"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/intRateTxt"
+        android:layout_alignEnd="@+id/loanTermTxt" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/startDate"
+        android:text="0"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="@string/HOA_Amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hoaAmtTxt"
+        android:layout_alignBaseline="@+id/hoaAmt"
+        android:layout_alignBottom="@+id/hoaAmt"
+        android:layout_alignEnd="@+id/hiPerYearTxt" />
 
 
 </RelativeLayout>

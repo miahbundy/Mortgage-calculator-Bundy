@@ -55,7 +55,7 @@ public class pay_sum extends AppCompatActivity {
          five = mintent.getStringExtra("hoaAmt");
         //String six = mintent.getStringExtra("startDate");
          seven = mintent.getStringExtra("propTax");
-         eight = mintent.getStringExtra("hiPerYear");
+        String eight = mintent.getStringExtra("hiPerYear");
 
 
         test.setText(one);

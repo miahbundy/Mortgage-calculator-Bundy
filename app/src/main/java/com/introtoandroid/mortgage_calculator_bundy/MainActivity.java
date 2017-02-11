@@ -2,14 +2,14 @@ package com.introtoandroid.mortgage_calculator_bundy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
-import android.widget.Button;
 import android.view.View;
 import android.content.Intent;
-import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.EditText;
 import android.content.Intent;
+import java.util.Calendar;
+import java.util.Date;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Integer ha= new Integer(0);
     //Date sd;
     Double pt= new Double(0);
-    Integer hpy= new Integer(0);
+    Float hpy= new Float(0.0);
 
     String one;
     String two;
@@ -46,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Intent in = getIntent();
+
 
         m = (RadioButton) findViewById(R.id.radio_mort);
         p = (RadioButton) findViewById(R.id.radio_pay);
@@ -73,31 +75,6 @@ public class MainActivity extends AppCompatActivity {
         // six = mintent.getStringExtra("startDate");
         seven = in.getStringExtra("propTax");
         eight = in.getStringExtra("hiPerYear");
-
-
-        /*if (one== null){homeVal.setText(0);}
-        else{homeVal.setText(one);}
-
-        if (two== null){loanTerm.setText(0);}
-        else{loanTerm.setText(two);}
-
-        if (three== null){loanAmt.setText(0);}
-        else{loanAmt.setText(three);}
-
-        if (four== null){intRate.setText(0);}
-        else{intRate.setText(four);}
-
-        if (five== null){hoaAmt.setText(0);}
-        else{hoaAmt.setText(five);}
-
-        *//*if (six== null){homeVal.setText(0);}
-        else{homeVal.setText(one);}*//*
-
-        if (seven== null){propTax.setText(0);}
-        else{propTax.setText(seven);}
-
-        if (eight== null){hiPerYear.setText(0);}
-        else{hiPerYear.setText(eight);}*/
 
 
         if(one!=null){
@@ -137,6 +114,35 @@ public class MainActivity extends AppCompatActivity {
         String pt1 = propTax.getText().toString();
         String hpy1 = hiPerYear.getText().toString();
 
+        hv = Integer.parseInt(homeVal.getText().toString());
+        lt = Integer.parseInt(loanTerm.getText().toString());
+        la = Integer.parseInt(loanAmt.getText().toString());
+        ir = Integer.parseInt(intRate.getText().toString());
+        ha = Integer.parseInt(hoaAmt.getText().toString());
+        //sd = (Integer) startDate.getText();
+        pt = Double.parseDouble(propTax.getText().toString());
+        hpy = Float.parseFloat(hiPerYear.getText().toString());
+
+        Integer numOfMonths = 12;
+
+        Float hiPerMonth = hpy/numOfMonths;
+        String hiPerMonthTxt = hiPerMonth.toString();
+
+        Double monthlyTaxPaid = la*(pt/100);
+        String monthlyTaxPaidTxt = monthlyTaxPaid.toString();
+
+        Float totalHIPaid = lt*hpy;
+        String totalHIPaidTxt = totalHIPaid.toString();
+
+        Integer hoaPerYear = ha*numOfMonths;
+        String hoaPerYearTxt = hoaPerYear.toString();
+
+        Integer totalHOAPaid = hoaPerYear*lt;
+        String totalHOAPaidTxt = totalHOAPaid.toString();
+
+
+
+
         if (isMort == 1) {
 
             Intent mintent = new Intent(MainActivity.this, mortSum.class);
@@ -149,6 +155,12 @@ public class MainActivity extends AppCompatActivity {
             //mintent.putExtra("loanTerm", sd1);
             mintent.putExtra("propTax", pt1);
             mintent.putExtra("hiPerYear", hpy1);
+
+            mintent.putExtra("hiPerMonth", hiPerMonthTxt);
+            mintent.putExtra("monthlyTaxPaid", monthlyTaxPaidTxt);
+            mintent.putExtra("totalHIPaid", totalHIPaidTxt);
+            mintent.putExtra("hoaPerYear", hoaPerYearTxt);
+            mintent.putExtra("totalHOAPaid", totalHOAPaidTxt);
 
             startActivity(mintent);
         }
@@ -199,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
         ha = Integer.parseInt(hoaAmt.getText().toString());
         //sd = (Integer) startDate.getText();
         pt = Double.parseDouble(propTax.getText().toString());
-        hpy = Integer.parseInt(hiPerYear.getText().toString());
+        hpy = Float.parseFloat(hiPerYear.getText().toString());
 
 
         outState.putInt("hv",hv);
@@ -209,7 +221,7 @@ public class MainActivity extends AppCompatActivity {
         outState.putInt("ha",ha);
         //outState.putInt("sd",sd);
         outState.putDouble("pt",pt);
-        outState.putInt("hpy",hpy);
+        outState.putFloat("hpy",hpy);
 
 
     }
@@ -225,7 +237,7 @@ public class MainActivity extends AppCompatActivity {
         ha = savedInstanceState.getInt("ha");
         //sd = savedInstanceState.getInt("sd");
         pt = savedInstanceState.getDouble("pt");
-        hpy = savedInstanceState.getInt("hpy");
+        hpy = savedInstanceState.getFloat("hpy");
 
 
         homeVal.setText(hv.toString());
@@ -238,6 +250,7 @@ public class MainActivity extends AppCompatActivity {
         hiPerYear.setText(hpy.toString());
 
     }
+
 
 
 }
