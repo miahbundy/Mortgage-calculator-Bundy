@@ -17,7 +17,6 @@ public class pay_sum extends AppCompatActivity {
     TextView test3;
     TextView test4;
     TextView test5;
-    //TextView test6;
     TextView test7;
     TextView test8;
 
@@ -26,10 +25,12 @@ public class pay_sum extends AppCompatActivity {
     String three;
     String four;
     String five;
-    //String six;
     String seven;
     String eight;
 
+    String day;
+    String month;
+    String year;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,6 @@ public class pay_sum extends AppCompatActivity {
         test3 = (TextView) findViewById(R.id.textView8);
         test4 = (TextView) findViewById(R.id.textView10);
         test5 = (TextView) findViewById(R.id.textView12);
-        //test6 = (TextView) findViewById(R.id.textView14);
         test7 = (TextView) findViewById(R.id.textView16);
         test8 = (TextView) findViewById(R.id.textView18);
 
@@ -53,9 +53,13 @@ public class pay_sum extends AppCompatActivity {
          three = mintent.getStringExtra("loanAmt");
          four = mintent.getStringExtra("intRate");
          five = mintent.getStringExtra("hoaAmt");
-        //String six = mintent.getStringExtra("startDate");
          seven = mintent.getStringExtra("propTax");
-        String eight = mintent.getStringExtra("hiPerYear");
+         eight = mintent.getStringExtra("hiPerYear");
+
+        day = mintent.getStringExtra("day");
+        month = mintent.getStringExtra("month");
+        year = mintent.getStringExtra("year");
+
 
 
         test.setText(one);
@@ -63,7 +67,6 @@ public class pay_sum extends AppCompatActivity {
         test3.setText(three);
         test4.setText(four);
         test5.setText(five);
-        //test6.setText(six);
         test7.setText(seven);
         test8.setText(eight);
     }
@@ -74,7 +77,6 @@ public class pay_sum extends AppCompatActivity {
         String la1 = three;
         String ir1 = four;
         String ha1 = five;
-        //String sd1 = six;
         String pt1 = seven;
         String hpy1 = eight;
 
@@ -85,9 +87,12 @@ public class pay_sum extends AppCompatActivity {
         intent2.putExtra("loanAmt", la1);
         intent2.putExtra("intRate", ir1);
         intent2.putExtra("hoaAmt", ha1);
-        //intent2.putExtra("loanTerm", sd1);
         intent2.putExtra("propTax", pt1);
         intent2.putExtra("hiPerYear", hpy1);
+
+        intent2.putExtra("day", day);
+        intent2.putExtra("month", month);
+        intent2.putExtra("year", year);
 
         startActivity(intent2);
 

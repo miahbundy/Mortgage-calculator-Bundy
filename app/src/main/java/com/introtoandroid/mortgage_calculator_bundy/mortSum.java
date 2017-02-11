@@ -13,7 +13,6 @@ public class mortSum extends AppCompatActivity {
 
     TextView morg;
 
-
     TextView monthlyhi;
     TextView taxPerMonth;
     TextView totalHIPaidTV;
@@ -25,7 +24,6 @@ public class mortSum extends AppCompatActivity {
     String three;
     String four;
     String five;
-    //String six;
     String seven;
     String eight;
 
@@ -34,6 +32,10 @@ public class mortSum extends AppCompatActivity {
     String totalHIPaid;
     String hoaPerYear;
     String totalHOAPaid;
+
+    String day;
+    String month;
+    String year;
 
 
     @Override
@@ -55,7 +57,6 @@ public class mortSum extends AppCompatActivity {
         three = mintent.getStringExtra("loanAmt");
         four = mintent.getStringExtra("intRate");
         five = mintent.getStringExtra("hoaAmt");
-        // six = mintent.getStringExtra("startDate");
         seven = mintent.getStringExtra("propTax");
         eight = mintent.getStringExtra("hiPerYear");
 
@@ -65,15 +66,16 @@ public class mortSum extends AppCompatActivity {
         hoaPerYear = mintent.getStringExtra("hoaPerYear");
         totalHOAPaid =  mintent.getStringExtra("totalHOAPaid");
 
+        day = mintent.getStringExtra("day");
+        month = mintent.getStringExtra("month");
+        year = mintent.getStringExtra("year");
+
 
         monthlyhi.setText(hiPerMonth);
         taxPerMonth.setText(monthlyTaxPaid);
         totalHIPaidTV.setText(totalHIPaid);
         hoaPerYearTV.setText(hoaPerYear);
         totalHOAPaidTV.setText(totalHOAPaid);
-
-
-
 
 
 
@@ -87,7 +89,6 @@ public class mortSum extends AppCompatActivity {
         String la1 = three;
         String ir1 = four;
         String ha1 = five;
-        //String sd1 = six;
         String pt1 = seven;
         String hpy1 = eight;
 
@@ -98,9 +99,12 @@ public class mortSum extends AppCompatActivity {
         intent.putExtra("loanAmt", la1);
         intent.putExtra("intRate", ir1);
         intent.putExtra("hoaAmt", ha1);
-        //pintent.putExtra("loanTerm", sd1);
         intent.putExtra("propTax", pt1);
         intent.putExtra("hiPerYear", hpy1);
+
+        intent.putExtra("day", day);
+        intent.putExtra("month", month);
+        intent.putExtra("year", year);
 
         startActivity(intent);
 

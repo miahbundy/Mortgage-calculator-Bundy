@@ -39,9 +39,6 @@ public class MainActivity extends AppCompatActivity {
     int mo;
     int ye;
 
-
-
-
     String one;
     String two;
     String three;
@@ -49,8 +46,9 @@ public class MainActivity extends AppCompatActivity {
     String five;
     String seven;
     String eight;
-
-
+    String nine;
+    String ten;
+    String eleven;
 
 
     @Override
@@ -79,9 +77,13 @@ public class MainActivity extends AppCompatActivity {
         three = in.getStringExtra("loanAmt");
         four = in.getStringExtra("intRate");
         five = in.getStringExtra("hoaAmt");
-        // six = mintent.getStringExtra("startDate");
         seven = in.getStringExtra("propTax");
         eight = in.getStringExtra("hiPerYear");
+
+        nine = in.getStringExtra("day");
+        ten = in.getStringExtra("month");
+        eleven = in.getStringExtra("year");
+
 
 
         if(one!=null){
@@ -99,12 +101,18 @@ public class MainActivity extends AppCompatActivity {
         if(five!=null){
         hoaAmt.setText(five);}
 
-
         if(seven!=null){
         propTax.setText(seven);}
 
         if(eight!=null){
         hiPerYear.setText(eight);}
+
+        if(nine!=null&&ten!=null&&eleven!=null){
+            da = Integer.parseInt(nine);
+            mo = Integer.parseInt(ten);
+            ye = Integer.parseInt(eleven);
+            chooseDate.updateDate(ye,mo,da);
+        }
 
 
     }
@@ -116,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
         String la1 = loanAmt.getText().toString();
         String ir1 = intRate.getText().toString();
         String ha1 = hoaAmt.getText().toString();
-        //String sd1 = startDate.getText().toString();
         String pt1 = propTax.getText().toString();
         String hpy1 = hiPerYear.getText().toString();
 
@@ -162,9 +169,12 @@ public class MainActivity extends AppCompatActivity {
             mintent.putExtra("loanAmt", la1);
             mintent.putExtra("intRate", ir1);
             mintent.putExtra("hoaAmt", ha1);
-            //mintent.putExtra("loanTerm", sd1);
             mintent.putExtra("propTax", pt1);
             mintent.putExtra("hiPerYear", hpy1);
+
+            mintent.putExtra("day", day);
+            mintent.putExtra("month", month);
+            mintent.putExtra("year", year);
 
             mintent.putExtra("hiPerMonth", hiPerMonthTxt);
             mintent.putExtra("monthlyTaxPaid", monthlyTaxPaidTxt);
@@ -183,7 +193,6 @@ public class MainActivity extends AppCompatActivity {
             pintent.putExtra("loanAmt", la1);
             pintent.putExtra("intRate", ir1);
             pintent.putExtra("hoaAmt", ha1);
-            //pintent.putExtra("loanTerm", sd1);
             pintent.putExtra("propTax", pt1);
             pintent.putExtra("hiPerYear", hpy1);
 
