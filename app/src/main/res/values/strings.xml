@@ -12,5 +12,10 @@
     <string name="mortgage_Summary">Mortgage Summary</string>
     <string name="payment_Summary">Payment Summary</string>
     <string name="go_Back_Home">Go Back Home</string>
+    <string name="monthly_property_Tax">Monthly Property Tax</string>
+    <string name="yearly_HOA">Yearly HOA</string>
+    <string name="total_HOA_Paid">Total HOA Paid</string>
+    <string name="total_HI_Paid">Total Home Insurance Paid</string>
+    <string name="monthly_HI">Monthly Home Insurance</string>
 </resources>
 
