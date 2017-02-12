@@ -3,8 +3,84 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:text="@string/payment_Summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="@string/go_Back_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="27dp"
+        android:onClick="sendMessage"
+        android:id="@+id/mGoBack"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
+        android:text="@string/totalNumOfPayments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:id="@+id/textView24"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_below="@+id/textView"
+        android:layout_toStartOf="@+id/mGoBack" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:id="@+id/textView25"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_below="@+id/textView24"
+        android:layout_toStartOf="@+id/textView"
+        android:layout_marginEnd="55dp" />
+
+    <TextView
+        android:text="@string/monthlyPayOffDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:id="@+id/textView5"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView28"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_marginStart="32dp"
+        android:layout_below="@+id/textView5" />
+
+    <TextView
+        android:text="@string/biweeklyPayOffDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:id="@+id/textView7"
+        android:layout_below="@+id/textView28"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textview29"
+        android:layout_alignStart="@+id/textView28"
+        android:layout_alignEnd="@+id/textView28"
+        android:layout_below="@+id/textView7" />
+
+
+    <!--<TextView
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -161,5 +237,5 @@
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/textView7"
-        android:layout_marginStart="91dp" />
+        android:layout_marginStart="91dp" />-->
 </RelativeLayout>

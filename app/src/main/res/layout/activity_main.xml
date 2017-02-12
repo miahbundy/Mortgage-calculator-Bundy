@@ -18,7 +18,7 @@
         android:layout_alignBaseline="@+id/propTaxTxt"
         android:layout_alignBottom="@+id/propTaxTxt"
         android:layout_alignParentEnd="true"
-        android:text="0" />
+        android:text="@string/zeroo" />
 
     <TextView
         android:text="@string/home_Insurance"
@@ -45,7 +45,7 @@
         android:id="@+id/hoaAmt"
         android:layout_above="@+id/button2"
         android:layout_alignParentEnd="true"
-        android:text="0" />
+        android:text="@string/zero" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -55,7 +55,7 @@
         android:id="@+id/hiPerYear"
         android:layout_above="@+id/hoaAmt"
         android:layout_alignParentEnd="true"
-        android:text="0" />
+        android:text="@string/zero" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -63,7 +63,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/loanTerm"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_above="@+id/propTax"
         android:layout_alignParentEnd="true" />
 
@@ -115,7 +115,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/homeVal"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_below="@+id/radioGroup"
         android:layout_alignParentEnd="true" />
 
@@ -125,7 +125,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/loanAmt"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_below="@+id/homeVal"
         android:layout_alignParentEnd="true" />
 
@@ -135,7 +135,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/intRate"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_below="@+id/loanAmt"
         android:layout_alignParentEnd="true" />
 

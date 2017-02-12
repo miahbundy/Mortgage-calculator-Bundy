@@ -41,7 +41,7 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView21"
@@ -58,7 +58,7 @@
         android:layout_marginStart="17dp" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView19"
@@ -66,7 +66,7 @@
         android:layout_alignStart="@+id/textView12" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView23"
@@ -82,7 +82,7 @@
         android:layout_alignParentEnd="true" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView12"
@@ -91,7 +91,7 @@
         android:layout_toEndOf="@+id/textView" />
 
     <TextView
-        android:text="TextView"
+        android:text=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="39dp"

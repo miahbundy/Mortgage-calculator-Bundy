@@ -17,5 +17,10 @@
     <string name="total_HOA_Paid">Total HOA Paid</string>
     <string name="total_HI_Paid">Total Home Insurance Paid</string>
     <string name="monthly_HI">Monthly Home Insurance</string>
+    <string name="totalNumOfPayments">Total Number of Payments</string>
+    <string name="monthlyPayOffDate">Monthly Pay-Off Date</string>
+    <string name="biweeklyPayOffDate"> Bi-Weekly Pay-Off Date</string>
+    <string name="zero">0</string>
+    <string name="zeroo">0.0</string>
 </resources>
 

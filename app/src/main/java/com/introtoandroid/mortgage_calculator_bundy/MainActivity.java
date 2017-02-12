@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         pt = Double.parseDouble(propTax.getText().toString());
         hpy = Float.parseFloat(hiPerYear.getText().toString());
 
-
+        //math
         Integer numOfMonths = 12;
 
         Float hiPerMonth = hpy/numOfMonths;
@@ -157,6 +157,30 @@ public class MainActivity extends AppCompatActivity {
         Integer totalHOAPaid = hoaPerYear*lt;
         String totalHOAPaidTxt = totalHOAPaid.toString();
 
+        Integer totalNumOfPayments = lt*numOfMonths;
+        String totalNumOfPaymentsTxt = totalNumOfPayments.toString();
+
+        Integer biDoneMonth = chooseDate.getMonth();
+        Integer biDoneYear = chooseDate.getYear() + (lt - (lt/10));
+
+        Integer moDoneMonth;
+        Integer moDoneYear;
+        if (biDoneMonth==0){
+            moDoneMonth = 11;
+            moDoneYear = chooseDate.getYear() + (lt-1);
+        }
+        else{
+            moDoneMonth = biDoneMonth-1;
+            moDoneYear = chooseDate.getYear() + lt;
+        }
+
+        biDoneMonth++;
+        moDoneMonth++;
+
+        String biDoneMonthTxt = biDoneMonth.toString();
+        String biDoneYearTxt = biDoneYear.toString();
+        String moDoneMonthTxt = moDoneMonth.toString();
+        String moDoneYearTxt = moDoneYear.toString();
 
 
 
@@ -199,6 +223,14 @@ public class MainActivity extends AppCompatActivity {
             pintent.putExtra("day", day);
             pintent.putExtra("month", month);
             pintent.putExtra("year", year);
+
+            pintent.putExtra("totalNumOfPayments", totalNumOfPaymentsTxt);
+
+            pintent.putExtra("moDoneMonth", moDoneMonthTxt);
+            pintent.putExtra("biDoneMonth", biDoneMonthTxt);
+            pintent.putExtra("moDoneYear", moDoneYearTxt);
+            pintent.putExtra("biDoneYear", biDoneYearTxt);
+
 
             startActivity(pintent);
         }

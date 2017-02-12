@@ -9,7 +9,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/loanTerm"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_above="@+id/propTax"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="26dp" />
@@ -20,7 +20,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/hoaAmt"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true" />
 
@@ -102,7 +102,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/hiPerYear"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_above="@+id/hoaAmtTxt"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="12dp" />
@@ -113,7 +113,7 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/propTax"
-        android:text="0.0"
+        android:text="@string/zeroo"
         android:layout_marginBottom="14dp"
         android:layout_above="@+id/hiPerYearTxt"
         android:layout_alignParentEnd="true" />
@@ -133,7 +133,7 @@
             android:id="@+id/homeValTxt"
         android:layout_above="@+id/loanTermTxt"
         android:layout_alignEnd="@+id/loanAmtTxt"
-        android:layout_below="@+id/radioGroup8" />
+         />
 
     <TextView
             android:text="@string/loan_Amount"
@@ -158,7 +158,7 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/homeVal"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_below="@+id/homeValTxt"
         android:layout_alignStart="@+id/loanAmtTxt" />
 
@@ -168,7 +168,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/loanAmt"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_alignBaseline="@+id/propTaxTxt"
         android:layout_alignBottom="@+id/propTaxTxt"
         android:layout_alignStart="@+id/loanAmtTxt" />
@@ -179,7 +179,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/intRate"
-        android:text="0"
+        android:text="@string/zero"
         android:layout_below="@+id/intRateTxt"
         android:layout_alignStart="@+id/intRateTxt" />
 

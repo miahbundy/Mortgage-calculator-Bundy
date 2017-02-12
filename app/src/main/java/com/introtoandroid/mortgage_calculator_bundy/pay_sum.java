@@ -11,14 +11,9 @@ import org.w3c.dom.Text;
 public class pay_sum extends AppCompatActivity {
 
     TextView pay;
-
-    TextView test;
-    TextView test2;
-    TextView test3;
-    TextView test4;
-    TextView test5;
-    TextView test7;
-    TextView test8;
+    TextView numPaymentsTV;
+    TextView monthlyPO;
+    TextView biweeklyPO;
 
     String one;
     String two;
@@ -32,20 +27,22 @@ public class pay_sum extends AppCompatActivity {
     String month;
     String year;
 
+    String mDM;
+    String mDY;
+    String bDM;
+    String bDY;
+
+    String totalNumPayments;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pay_sum);
 
         pay = (TextView) findViewById(R.id.textView);
-
-        test = (TextView) findViewById(R.id.textView3);
-        test2 = (TextView) findViewById(R.id.textView6);
-        test3 = (TextView) findViewById(R.id.textView8);
-        test4 = (TextView) findViewById(R.id.textView10);
-        test5 = (TextView) findViewById(R.id.textView12);
-        test7 = (TextView) findViewById(R.id.textView16);
-        test8 = (TextView) findViewById(R.id.textView18);
+        numPaymentsTV = (TextView) findViewById(R.id.textView25);
+        monthlyPO = (TextView) findViewById(R.id.textView28);
+        biweeklyPO = (TextView) findViewById(R.id.textview29);
 
         Intent mintent = getIntent();
          one = mintent.getStringExtra("homeVal");
@@ -60,15 +57,19 @@ public class pay_sum extends AppCompatActivity {
         month = mintent.getStringExtra("month");
         year = mintent.getStringExtra("year");
 
+        totalNumPayments = mintent.getStringExtra("totalNumOfPayments");
+
+        mDM = mintent.getStringExtra("moDoneMonth");
+        mDY = mintent.getStringExtra("moDoneYear");
+        bDM = mintent.getStringExtra("biDoneMonth");
+        bDY = mintent.getStringExtra("biDoneYear");
+
+        numPaymentsTV.setText(totalNumPayments);
+
+        biweeklyPO.setText("Month number " + bDM + " of " +bDY);
+        monthlyPO.setText("Month number " + mDM + " of " + mDY);
 
 
-        test.setText(one);
-        test2.setText(two);
-        test3.setText(three);
-        test4.setText(four);
-        test5.setText(five);
-        test7.setText(seven);
-        test8.setText(eight);
     }
 
     public void sendMessage(View view) {
